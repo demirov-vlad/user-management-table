@@ -1,0 +1,75 @@
+@import './_variables.scss';
+
+.message {
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 38px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.error {
+    text-align: center;
+    color: indianred;
+  }
+}
+
+.App {
+  font-family: $font-stack;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .table-container {
+    overflow-x: auto; //horizontal scrolling of the table on mobile devices
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    input {
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid $border-color;
+      border-radius: 20px;
+      font-size: 16px;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+
+    th,
+    td {
+      min-width: 200px;
+      padding: 12px;
+      border: 1px solid $border-color;
+      text-align: left;
+      color: $text-color;
+      white-space: nowrap; // no wrapping in table cells
+
+      @media (max-width: $breakpoint-mobile) {
+        min-width: 40dvw;
+      }
+    }
+
+    th {
+      background-color: $primary-color;
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: $secondary-color;
+    }
+  }
+}
