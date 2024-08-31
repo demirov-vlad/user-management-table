@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# User Table with Filters
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React application that displays a list of users in a table format with dynamic filtering capabilities. The app integrates with Redux for state management and uses RTK Query to fetch user data from an external API. The application is styled using SCSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Filtering:** Users can filter the table data based on name, username, email, and phone fields.
+- **API Integration:** Fetches user data from the JSONPlaceholder API using RTK Query.
+- **Responsive Design:** The table layout adapts to different screen sizes, providing horizontal scrolling on smaller devices.
+- **Modular Architecture:** The app is structured with reusable components, Redux slices, and well-organized styling.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: A JavaScript library for building user interfaces.
+- **Redux Toolkit**: A predictable state container for JavaScript apps.
+- **RTK Query**: A powerful data-fetching and caching tool built on top of Redux Toolkit.
+- **SCSS**: A CSS preprocessor that allows the use of variables, nested rules, and more.
+- **TypeScript**: A typed superset of JavaScript that enhances code quality and development experience.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Prerequisites
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Node.js (>= 12.x)
+- npm (>= 6.x) or yarn (>= 1.x)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/your-username/user-table-filters.git
+    cd user-table-filters
+    ```
+
+2. **Install the dependencies:**
+
+   If you're using npm:
+
+    ```bash
+    npm install
+    ```
+
+   Or if you're using yarn:
+
+    ```bash
+    yarn install
+    ```
+
+### Running the Application
+
+To start the development server, use the following command:
+
+```bash
+npm start
